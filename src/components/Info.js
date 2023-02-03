@@ -16,7 +16,7 @@ const Info = ({data}) => {
    } 
 
   return (
-    <div>
+    <div className="company">
         <div className="short">
             <ul >
                 <li>{data.company.name}</li>
