@@ -8,9 +8,9 @@ function App() {
   const [x4 , setX4] =useState(4);
   const [x , setX] =useState(1);
   const [lastClick, setLast] = useState(1);
+  let y=x;
   const handleClick=(e)=>{
-     setX(e.target.outerText);
-     console.log(e);
+     setX(e.target.innerHTML);
     //  // eslint-disable-next-line array-callback-return
     //  Array.of(e.target.parentElement.childNodes).map(child => {
     //    for(let i=1;i<5;i++){
@@ -28,7 +28,6 @@ function App() {
       setLast(e.target);
     }
     e.target.classList.add("back");
-    console.log(e.target.classList);
 }
 
   const handleArrowClick=(e)=>{
@@ -43,9 +42,12 @@ function App() {
       //   setX4(x4-1);
       // }
     }
+    console.log(x);
     if(e.target.id === "right"){
+      y=x;
+      y++;
       if(x<4){
-        setX(x+1);
+        setX(y);
       }
       // if(x===x4){
       //   setX1(x1+1);
@@ -53,8 +55,9 @@ function App() {
       //   setX3(x3+1);
       //   setX4(x4+1);
       // }
-      // console.log(x);
+      console.log(x);
     }
+    console.log(x);
   }
 
   return (
